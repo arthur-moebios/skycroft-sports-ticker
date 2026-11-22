@@ -1,0 +1,21 @@
+# Subir o serviço:  docker compose up -d
+#   display  -> http://<ip-do-host>:8099/
+#   controle -> http://<ip-do-host>:8099/remote
+services:
+  skycroft:
+    image: ghcr.io/arthur-moebios/skycroft-sports-ticker:latest
+    container_name: skycroft-ticker
+    restart: unless-stopped
+    ports:
+      - "8099:8099"
+    volumes:
+      - skycroft-data:/data          # displays, favoritos e chave de pareamento
+    environment:
+      TZ: America/Sao_Paulo
+      # Endereço que o QR do display aponta para o controle remoto. Sem isto, usa o
+      # host pelo qual a TV abriu a página (ex.: http://192.168.0.10:8099):
+      # SKYCROFT_REMOTE_BASE: http://192.168.0.10:8099
+      # Exige chave (QR) para usar o controle remoto:
+      # SKYCROFT_REQUIRE_KEY: "1"
+volumes:
+  skycroft-data:

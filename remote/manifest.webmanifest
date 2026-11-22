@@ -1,0 +1,19 @@
+{
+  "name": "Ticker — Controle remoto",
+  "short_name": "Ticker",
+  "description": "Controle seu ticker: escolha o destaque, as ligas e os times favoritos.",
+  "start_url": "/remote",
+  "scope": "/remote",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#070b16",
+  "theme_color": "#070b16",
+  "icons": [
+    {
+      "src": "/assets/skycroft-logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+.git
+.github
+node_modules
+scripts
+server/*.selftest.js
+server/*.smoke.js
+server/control-state.json
+server/remote-key
+remote/editor.e2e.js
+PROGRESS.md
+*.md

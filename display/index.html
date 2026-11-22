@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skycroft Ticker — TV</title>
+  <link rel="stylesheet" href="style.css?v=3">
+</head>
+<body>
+  <div id="stage">
+    <!-- Acesso ao controle remoto (o JS o encaixa no topbar do layout Padrão) -->
+    <div class="remote-access" id="remote-access" hidden>
+      <div id="remote-qr-small" class="remote-qr-small"></div>
+      <span>CONTROLE</span>
+    </div>
+
+    <!-- Blocos do display ativo (montados por app.js) -->
+    <div id="blocks"></div>
+
+    <!-- A tela de setup e montada por app.js so quando o aparelho perde o WiFi -->
+  </div>
+
+  <script src="mock-data.js"></script>
+  <script src="assets/qrcode.js"></script>
+  <script src="app.js?v=3"></script>
+</body>
+</html>
